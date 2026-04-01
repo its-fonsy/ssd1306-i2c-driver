@@ -124,4 +124,8 @@ void ssd1306_set_column_address_boundary(uint8_t address, uint8_t start, uint8_t
 void ssd1306_set_page_address_boundary(uint8_t address, uint8_t start, uint8_t end);
 void ssd1306_reset_column_and_page_boundaries(uint8_t address);
 
+#ifdef SSD1306_PRINTF
+void ssd1306_printf(uint8_t address, const char* fmt, ...);
+#endif
+
 #endif /* __SSD1306_H__ */
